@@ -1,0 +1,42 @@
+﻿.top {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    height: 80px;
+    background-color: #7db964;
+}
+header{
+    margin-left:80px;
+   
+    color: white;
+}
+
+nav a{
+    display:block;
+    padding:8px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    height: 650px;
+    background-color: #cfe1c7;
+}
+footer {
+    text-align: end;
+    color: red;
+    margin-right: 80px;
+}
+.listaimagenes {
+    list-style: none;
+   
+}
+.side a {
+    display: flex;
+    flex-direction: column;
+    color: #3f7926;
+
+}
+.side p{
+    color:black;
+    font-weight:600;
+}

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+<!--VA A RECIBIR UNA COLECCIÓN DE RECETAS-->
+@{
+    ViewData["Title"] = "Index Recetas";
+}
+@section SideBar{
+     <div class="side">
+        @Html.ActionLink("Nueva", "Create", "Receta")
+        @foreach (var item in Model)
+        {
+            <p> ID : @Html.DisplayFor(model=>item.Id)</p>
+                @Html.ActionLink("Eliminar", "Delete", "Receta", new{id=item.Id})
+                @Html.ActionLink("Editar", "Edit", "Receta", new{id=item.Id})
+            
+        }
+    </div>
+
+}
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model=>model.Id)</th>
+        <th>@Html.DisplayNameFor(model=>model.Nombre)</th>
+        <th>@Html.DisplayNameFor(model=>model.Categoria)</th>
+        <th>@Html.DisplayNameFor(model=>model.Autor)</th>
+        <th>@Html.DisplayNameFor(model=>model.Apellido)</th>
+        <th>@Html.DisplayNameFor(model=>model.Email)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Id)
+            </td>
+            <td>
+                @Html.ActionLink(item.Nombre, "Details", "Receta", new{id=item.Id})
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Categoria)
+            </td>
+            <td>
+                 @Html.ActionLink(item.Autor,"GetByAutor","Receta",new{autor=item.Autor })
+            </td>
+            <td>
+                @Html.ActionLink(item.Apellido, "GetByApellido", "Receta", new{apellido=item.Apellido})
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Email)
+            </td>
+           
+            
+
+        </tr>
+    }
+</table>
