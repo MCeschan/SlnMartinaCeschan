@@ -1,4 +1,4 @@
-# SistemaWebMisRecetas
+# Sistema Web Mis Recetas
 TP Final del curso de ASP.NET Core MVC Programming, del Bootcamp de Accenture.
 Programar un sistema en MVC CORE, nombre de la aplicación Web: SistemaWebMisRecetas.
 <div align="row" >
